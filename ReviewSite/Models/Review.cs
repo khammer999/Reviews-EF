@@ -13,7 +13,7 @@ namespace ReviewSite.Models
         public string ReviewCategory { get; set; }
         public string Content { get; set; }
 
-        public object Model { get; set; }
+        public Category Category { get; set; }
 
     }
 

@@ -16,7 +16,7 @@ namespace ReviewSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddScoped<IReviewRepository, ReviewRepository>();
+          //  services.AddScoped<IReviewRepository, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

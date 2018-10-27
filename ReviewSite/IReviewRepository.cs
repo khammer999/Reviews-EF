@@ -12,7 +12,7 @@ namespace ReviewSite
 {
     public interface IReviewRepository
     {
-        List <Review> GetAll();
+        IEnumerable<Review> GetAll();
         Review FindOneReviewById(int id);
 
 

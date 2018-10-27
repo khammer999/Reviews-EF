@@ -21,9 +21,9 @@ namespace ReviewSite
                 );
            
             modelBuilder.Entity<Review>().HasData(
-                new Review() { Id = 1, Title = "Hard Rain at Natalies Coal Fired Pizza" },
-                new Review() { Id = 2, Title = "Hunt for Red Oktober" },
-                new Review() { Id = 3, Title = "Of Mice and Men" }
+                new Review() { Id = 1, CategoryId = 1, Title = "Hard Rain at Natalies Coal Fired Pizza" },
+                new Review() { Id = 2, CategoryId = 2, Title = "Hunt for Red Oktober" },
+                new Review() { Id = 3, CategoryId = 2, Title = "Of Mice and Men" }
                 );
             base.OnModelCreating(modelBuilder);
         }

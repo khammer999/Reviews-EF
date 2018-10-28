@@ -15,10 +15,5 @@ namespace ReviewSite
         IEnumerable<Review> GetAll();
         Review FindOneReviewById(int id);
 
-
-
-
-
-
     }
 }

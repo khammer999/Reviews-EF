@@ -25,6 +25,11 @@ namespace ReviewSite
             db.SaveChanges();
         }
 
+        public T FindOneCategoryById(int id)
+        {
+            return db.Set<T>().Find(id);
+        }
+
         public T FindOneReviewById(int id)
         {
             return db.Set<T>().Find(id);

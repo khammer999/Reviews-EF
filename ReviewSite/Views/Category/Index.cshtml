@@ -1,5 +1,5 @@
 ﻿
-@model IEnumerable<ReviewSite.Models.Review>
+@model IEnumerable<ReviewSite.Models.Category>
 
 @{
     Layout = null;
@@ -19,7 +19,7 @@
         <div>
 
             <a href="/Reviews/Details/@category.Id">
-                @category.Title
+                @category.Name
             </a>
 
 

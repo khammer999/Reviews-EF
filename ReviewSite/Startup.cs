@@ -41,7 +41,9 @@ namespace ReviewSite
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Reviews}/{action=Index}/{id?}");
-            });
+                    //template: "{controller=Category}/{action=Index}/{id?}");
+
+        });
 
 
 

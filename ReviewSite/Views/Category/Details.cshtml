@@ -15,6 +15,18 @@
 
     <h1>Details for @Model.Name     </h1>
 
+    @foreach (var review in Model.Reviews)
+    {
+        <div>
+
+            <a href="/Reviews/Details/@review.Id">
+                @review.Title
+            </a>
+
+
+        </div>
+    }
+
 
 
 </body>

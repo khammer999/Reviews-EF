@@ -16,10 +16,10 @@ namespace ReviewSite
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category() { Id = 1, Name = "Concert", CategoryId = 1 },
-                new Category() { Id = 2, Name = "Book", CategoryId = 2 },
-                new Category() { Id = 3, Name = "Food", CategoryId = 4 },
-                new Category() { Id = 4, Name = "Album", CategoryId = 3 }
+                new Category() { Id = 1, Name = "Concert"},
+                new Category() { Id = 2, Name = "Book"},
+                new Category() { Id = 3, Name = "Food" },
+                new Category() { Id = 4, Name = "Album"}
                 );
            
             modelBuilder.Entity<Review>().HasData(

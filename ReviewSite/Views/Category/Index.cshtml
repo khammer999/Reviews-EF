@@ -15,33 +15,36 @@
     <title>Index</title>
     </head>
   <body>
-    <header>
-    <h1> Category Home Page</h1>
-    </header>
-    <main>
+    
+      <main>
 
-        <section>
-            <p>These are the avaialble review categories</p>
-        </section>
+          <header>
+              <h1> Category Home Page</h1>
+          </header>
 
-        <nav>
+          <section>
+              <p>Avaialble Categories are : </p>
+          </section>
+          <section>
+              <nav>
 
-            @foreach (var category in Model)
-            {
-                <div>
+                  @foreach (var category in Model)
+                  {
+                      <div>
 
-                    <a href="/Category/Details/@category.Id">
-                        Click to view details for : 
-                        @category.Name
-                    </a>
+                          <a href="/Category/Details/@category.Id">
 
-                </div>
-            }
-        </nav>
-        <footer>
-            <a href="~/Reviews">Go to Home Page</a>
-        </footer>
+                              @category.Name
+                          </a>
 
-     </main>
+                      </div>
+                  }
+              </nav>
+              <footer>
+                  <a href="~/Reviews">Go to Home Page</a>
+              </footer>
+          </section>
+
+      </main>
    </body>
 </html>

@@ -18,8 +18,4 @@ namespace ReviewSite.Models
         public int CategoryId{ get; set; }
     }
 
-
-
-
-
 }

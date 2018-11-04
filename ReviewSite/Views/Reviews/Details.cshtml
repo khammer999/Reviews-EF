@@ -2,8 +2,8 @@
 
     @{
 
-//  ViewData["Title"] = "Details";
-//Layout = null;
+/*  ViewData["Title"] = "Details";
+//Layout = null; */
     }
 
     <!DOCTYPE html>
@@ -11,27 +11,34 @@
     <html>
     <head>
         <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="~/styles/main.css" />
+
         <title>Details</title>
     </head>
     <body>
+        <main>
+            <header>
+                <h1>Review Details for @Model.Title</h1>
+            </header>
+            
+                <nav>
+                    <a href="/Category/Details/@Model.CategoryId">Reviews for: @Model.Category.Name</a>
+                </nav>
 
-        <h1>Details for @Model.Title</h1>
-
-        <a  href="/Category/Details/@Model.CategoryId">Category @Model.Category.Name</a>
-
-        <section>
-
-        <img src="@Model.ImageUrl">
-
-
-            <article>@Model.Content </article>
-
+                <section>
 
 
+                    <img src="@Model.ImageUrl">
 
-        </section>
 
+                    <article>@Model.Content </article>
 
+                </section>
+                <nav>
+                    <a href="~/Reviews">Go to Home Page</a>
+                </nav>
+           
+         </main>
     </body>
-
+    
 </html>

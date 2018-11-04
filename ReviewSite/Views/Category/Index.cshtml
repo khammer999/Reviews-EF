@@ -8,26 +8,40 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+   <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/styles/main.css" />
+
     <title>Index</title>
-</head>
-<body>
+    </head>
+  <body>
+    <header>
     <h1> Category Home Page</h1>
-    @foreach (var category in Model)
-    {
-        <div>
+    </header>
+    <main>
 
-            <a href="/Category/Details/@category.Id">Click to view details for 
-                @category.Name 
-            </a>
+        <section>
+            <p>These are the avaialble review categories</p>
+        </section>
 
+        <nav>
 
-        </div>
-    }
+            @foreach (var category in Model)
+            {
+                <div>
 
+                    <a href="/Category/Details/@category.Id">
+                        Click to view details for : 
+                        @category.Name
+                    </a>
 
+                </div>
+            }
+        </nav>
+        <footer>
+            <a href="~/Reviews">Go to Home Page</a>
+        </footer>
 
-
-</body>
+     </main>
+   </body>
 </html>

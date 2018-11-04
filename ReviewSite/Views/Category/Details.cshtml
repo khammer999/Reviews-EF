@@ -9,25 +9,33 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/styles/main.css" />
     <title>Details</title>
 </head>
 <body>
+    <main>
+        <header>
+            <h1>Reviews Available for the:  @Model.Name Category </h1>
+        </header>
 
-    <h1>Details for @Model.Name     </h1>
+        <nav>
+            @foreach (var review in Model.Reviews)
+            {
+                <div>
 
-    @foreach (var review in Model.Reviews)
-    {
-        <div>
-
-            <a href="/Reviews/Details/@review.Id">
-                @review.Title
-            </a>
-
-
-        </div>
-    }
-
+                    <a href="/Reviews/Details/@review.Id">
+                        @review.Title
+                    </a>
 
 
+                </div>
+            }
+        </nav>
+
+        <footer>
+            <a href="~/Reviews">Go to Home Page</a>
+        </footer>
+
+    </main>
 </body>
 </html>

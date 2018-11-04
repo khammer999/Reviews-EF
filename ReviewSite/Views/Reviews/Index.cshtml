@@ -9,22 +9,37 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/styles/main.css" />
+
+
     <title>Index</title>
 </head>
 <body>
+    <main>
+        <header>
+            <h1> Reviews Home Page</h1>
+        </header>
+        <section>
+            <h3>This is the list of available reviews: </h3>
+        </section>
+        <section>
+            <nav>
 
-    <h1> Reviews Home Page</h1>
-    @foreach (var review in Model)
-    {
-        <div>
+                @foreach (var review in Model)
+                {
+                    <div>
 
-            <a href="/Reviews/Details/@review.Id">
-                @review.Title
-            </a>
+                        <a href="/Reviews/Details/@review.Id">
+                            @review.Title
+                        </a>
 
 
-        </div>
-    }
+                    </div>
+                }
 
+            </nav>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewSite;
 
 namespace ReviewSite.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20181104053041_updatePIcsAndContent")]
+    partial class updatePIcsAndContent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,10 +62,10 @@ namespace ReviewSite.Migrations
 
                     b.HasData(
                         new { Id = 1, CategoryId = 1, Content = "Hard Rain rocked the house to a sold out crowd Friday August 10th, 2018 ", ImageUrl = "/images/band.jpg", Title = "Hard Rain at MusicBox Supper Club" },
-                        new { Id = 2, CategoryId = 2, Content = "The classic by Tom Clancy that inpired the movie of the same name!", ImageUrl = "/images/redOctober.jpg", Title = "Hunt for Red Oktober" },
-                        new { Id = 3, CategoryId = 2, Content = "the timeless John Steinbeck classic", ImageUrl = "/images/ofMiceAndMen.jpg", Title = "Of Mice and Men" },
-                        new { Id = 4, CategoryId = 4, Content = "Blue Eyed Soul, Rhythym and Blues from \"The PGH Rockers\" featuring the hits \"Darkest Side of Town\" and \"The Man Who Won The War\"", ImageUrl = "/images/deepInTheShadows.jpg", Title = "Deep In The Shadows" },
-                        new { Id = 5, CategoryId = 3, Content = "Jeet jet? Jah wanna sammich N'at? then yinz better get dahntahn for this-un. I cut the sammiches half in two for yinz cuz Mills on Wills don't never bring halupki, haluski, or kolachis. It's a 'Burgh Thing!", ImageUrl = "/images/primantiBros.jpg", Title = "Primanti Bothers" }
+                        new { Id = 2, CategoryId = 2, Content = "The classic by Tom Clancy that inpired the movie of the same name!", ImageUrl = "/images/bookcover.jpg", Title = "Hunt for Red Oktober" },
+                        new { Id = 3, CategoryId = 2, Content = "the timeless John Steinbeck classic", ImageUrl = "/images/bookcover.jpg", Title = "Of Mice and Men" },
+                        new { Id = 4, CategoryId = 4, Content = "Blue Eyed Soul, Rhythym and Blues from \"The PGH Rockers\" ", ImageUrl = "/images/deepInTheShadows.jpg", Title = "Deep In The Shadows" },
+                        new { Id = 5, CategoryId = 3, Content = "Jeet jet?, If yer nebbin fura sammich N'at, then yinz better get dahntown for this-un. I cut the sammiches half in two for yinz cuz Mills on Wills don't never bring halupki, haluski, or kolachis. ", ImageUrl = "/images/primantiBros.jpg", Title = "Primanti Bothers" }
                     );
                 });
 
